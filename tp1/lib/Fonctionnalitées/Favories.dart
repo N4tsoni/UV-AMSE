@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 import 'package:tp1/ClassMedia/Media.dart';
 
 class Favories extends ChangeNotifier {
@@ -7,13 +6,13 @@ class Favories extends ChangeNotifier {
 
   List<Media> get items => _favoriteItems;
 
-  void add(Media Media) {
-    _favoriteItems.add(Media);
+  void add(Media media) {
+    _favoriteItems.add(media);
     notifyListeners();
   }
 
-  void remove(Media Media) {
-    _favoriteItems.remove(Media);
+  void remove(Media media) {
+    _favoriteItems.remove(media);
     notifyListeners();
   }
 }
